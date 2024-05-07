@@ -21,10 +21,9 @@ class GY25_UART_SOFT:
       GY25_UART_SOFT::begin(baud_rate);
       GY25_UART_SOFT::setupBasic();
     }
-  private:
-    using SoftwareSerial::SoftwareSerial;
     // interface
     int availableGyro() {
+      Serial.println("BBBB");
       return GY25_UART_SOFT::available();
     }
     int readGyro() {
@@ -33,4 +32,6 @@ class GY25_UART_SOFT:
     void writeGyro(int data) {
       GY25_UART_SOFT::write(data);
     }
+  private:
+    using SoftwareSerial::SoftwareSerial;
 };

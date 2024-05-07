@@ -11,4 +11,4 @@
 
 #include "gy-25_uartSoft.h"
 #include "gy-25_uart.h"
-#include "gy-25_i2c.h"
+// #include "gy-25_i2c.h"

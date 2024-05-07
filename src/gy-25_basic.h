@@ -14,6 +14,13 @@
 
 class GY25 {
   public:
+    GY25() { 
+      availableGyro(); 
+    } 
+    ~GY25() {  
+      availableGyro();  
+    } 
+
     int angle[3];
 
     // interface
@@ -68,17 +75,26 @@ class GY25 {
       Serial.print(GY25::angle[2]);
       Serial.println();
     }
+
+    virtual int availableGyro() {
+      Serial.println("AAAA");
+      return 0;
+    }
+    
   private:
     unsigned char counter = 0;  //buffer where the received data will be stored
     unsigned char sign = 0;
     unsigned char Re_buf[8];
 
     // interface
-    int availableGyro() {
-      return 0;
-    }
     int readGyro() {
       return 0;
     }
     void writeGyro(int data) {}
+
+    // virtual int availableGyro() {
+    //   GY25::availableGyro();
+    // };
+    // virtual int readGyro() = 0;
+    // virtual void writeGyro(int data) = 0;
 };
