@@ -1,9 +1,15 @@
-// https://static-eu.insales.ru/files/1/1580/10954284/original/Описание_GY25__курс__крен__тангаж_.pdf
-// https://metanit.com/cpp/tutorial/5.10.php
+/*
+   arduino library for gy-25 module:
+   https://github.com/Ni3nayka/gy-25
+
+   author: Egor Bakay <egor_bakay@inbox.ru> Ni3nayka
+   write:  May 2024
+   modify: May 2024
+*/  
 
 #pragma once
 
-#include "gy-25.h"
+#include "gy-25_basic.h"
 #include <SoftwareSerial.h>
 
 class GY25_UART_SOFT: 
