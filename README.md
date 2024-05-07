@@ -6,7 +6,7 @@ arduino library for gy-25 module
 1.1) (windows) ..\Documents\Arduino\libraries\
 1.2) (linux) ~/Arduino/libraries/
 2) Откройте Arduino IDE
-3) Загрузите программу Файл/Примеры/gy-25/...
+3) Откройте пример Файл/Примеры/gy-25/...
 
 ### Ссылки:
 1) https://metanit.com/cpp/tutorial/5.10.php
