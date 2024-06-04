@@ -18,6 +18,8 @@ void setup() {
   Serial.begin(9600);
   // запускаем гироскоп
   gy25.setup();
+  // калибруем гироскоп (как правило не нужно)
+  // gy25.calibration();
 }
 
 void loop() {
