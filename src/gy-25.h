@@ -78,7 +78,7 @@ public:
         GY25::angle[0] = (GY25::Re_buf[1] << 8 | GY25::Re_buf[2]) / 100;
         GY25::angle[1] = (GY25::Re_buf[3] << 8 | GY25::Re_buf[4]) / 100;
         GY25::angle[2] = (GY25::Re_buf[5] << 8 | GY25::Re_buf[6]) / 100;
-        GY25::print();
+        // GY25::print();
         // gy25.update();
         int a = GY25::angle[0];
         if (a>100 && ggg_old<-100) GY25::ggg_cache -= 360;
