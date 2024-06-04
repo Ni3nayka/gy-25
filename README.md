@@ -1,5 +1,5 @@
 # gy-25
-arduino library for gy-25 module
+arduino library for gy-25 module (gyroscope)
 
 ### Установка:
 1) Скачайте библиотеку и поместите ее в папку с библиотеками:
@@ -10,7 +10,8 @@ arduino library for gy-25 module
 
 ### Поддерживаемые платформы:
 1) AVR (Arduino Uno, Arduino Nano, Arduino Mega...)
-2) ESP32
+2) Arduino Leonardo (ATmega32U4)
+3) ESP32
 
 ### Ссылки:
 1) https://metanit.com/cpp/tutorial/5.10.php
