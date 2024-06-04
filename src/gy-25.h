@@ -13,23 +13,14 @@
 
 #pragma once
 
-// #if(defined(__AVR_ATmega328P__)) 
-// #include <SoftwareSerial.h>
-// #elif (defined(ESP32)) 
-// #include "SoftwareSerial.h" //////////////////////////////////////////////////////////////////////////////////////////////////////
-// #else
-// #error "lib not supported this board"
-// #endif
-
 #if(defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__))
 #include <SoftwareSerial.h>
 #elif (defined(ESP32)) 
-#include "SoftwareSerial.h" //////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "SoftwareSerial.h" 
 #else
 #error "lib not supported this board"
 #endif
 
-#include <SoftwareSerial.h>
 // SoftwareSerial mySerial(10, 11); // RX, TX
 
 
