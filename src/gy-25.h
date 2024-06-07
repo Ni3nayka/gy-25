@@ -13,7 +13,7 @@
 
 #pragma once
 
-#if(defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__))
+#if(defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega2560__))
 #include <SoftwareSerial.h>
 #elif (defined(ESP32)) 
 #include "SoftwareSerial.h" 
@@ -69,6 +69,13 @@ public:
         GY25::angle[0] = (GY25::Re_buf[1] << 8 | GY25::Re_buf[2]) / 100;
         GY25::angle[1] = (GY25::Re_buf[3] << 8 | GY25::Re_buf[4]) / 100;
         GY25::angle[2] = (GY25::Re_buf[5] << 8 | GY25::Re_buf[6]) / 100;
+        #ifdef ESP32
+        for (int i = 0; i<3; i++) {
+          if (GY25::angle[i]>180) {
+            GY25::angle[i] -= 654;
+          } 
+        }
+        #endif
         // GY25::print();
         // gy25.update();
         int a = GY25::angle[0];

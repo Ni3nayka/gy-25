@@ -19,6 +19,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 */
 
+#ifdef ESP32
+
 #ifndef __SoftwareSerial_h
 #define __SoftwareSerial_h
 
@@ -447,3 +449,4 @@ extern template bool circular_queue<uint32_t, EspSoftwareSerial::UARTBase*>::pus
 
 #endif // __SoftwareSerial_h
 
+#endif // #ifdef ESP32
