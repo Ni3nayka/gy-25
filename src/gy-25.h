@@ -4,7 +4,7 @@
 
    author: Egor Bakay <egor_bakay@inbox.ru> Ni3nayka
    write:  June 2024
-   modify: June 2024
+   modify: September 2025
 
    ВНИМАНИЕ!!!
    Эта либа написана на коленке в самый последний момент, на основе разроаботок с предыдущей олимпиады, 
@@ -13,8 +13,12 @@
 
 #pragma once
 
+#ifndef GY25_SERIAL_BOD
+#define GY25_SERIAL_BOD 115200
+#endif
+
 #ifndef GY25_SERIAL
-  #if(defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega2560__))
+  #if (defined(__AVR__))
   #include <SoftwareSerial.h>
   #elif (defined(ESP32)) 
   #include "SoftwareSerial.h" 
@@ -34,8 +38,8 @@ class GY25: private SoftwareSerial {  //(): public SoftwareSerial {
     int angle[3];
     long int horizontal_angle;
 
-    void setup(int bod = 115200) {
-      GY25::begin(bod);
+    void setup() {
+      GY25::begin(GY25_SERIAL_BOD);
       delay(1000);
       GY25::write(0XA5);  // request the data
       GY25::write(0X52);
